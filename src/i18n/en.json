@@ -1,0 +1,17 @@
+{
+   "imgsettings": "Image settings",
+   "imgwidth": "Image width",
+   "imgwidthdesc": "Enter width of image in px (only digits).",
+   "imgHeight": "Image height",
+   "imgHeightdesc": "Enter height of image in px (only digits).",
+   "grayscale": "Grayscale",
+   "grayscaledesc": "Greyscale the image.",
+   "randomimg": "Random image",
+   "specificimg": "Specific Image",
+   "specificDesc": "Get a specific image by entering id.",
+   "specificRef": "You can find a list of all images here.",
+   "blurredimg": "Blurred image",
+   "blurredRef": "Get a blurred image.",
+   "cropgravity": "Crop Gravity",
+   "cropgravRef": "Select the cropping gravity."
+}

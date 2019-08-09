@@ -1,0 +1,34 @@
+{
+  "name": "simpleattribution",
+  "version": "1.0.0",
+  "description": "Add a simple html attribution in sitevision ",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinahlqvist/simpleattribution"
+  },
+  "scripts": {
+    "setup": "node util/setup.js",
+    "zip": "node util/zip.js",
+    "deploy": "npm run zip && node util/deploy.js",
+    "force-deploy": "npm run zip && node util/deploy.js force",
+    "create-addon": "node util/create-addon.js",
+    "sign": "npm run zip && node util/sign.js",
+    "prod-deploy": "node util/prod-deploy.js"
+  },
+  "license": "MIT",
+  "author": "SiteVision AB",
+  "bugs": {
+    "url": "https://github.com/martinahlqvist/simpleattribution"
+  },
+  "homepage": "https://github.com/martinahlqvist/simpleattribution#readme",
+  "devDependencies": {
+    "inquirer": "^5.2.0",
+    "jsonfile": "^4.0.0",
+    "request": "^2.87.0",
+    "zip-dir": "^1.0.2"
+  },
+  "dependencies": {
+    "colors": "^1.3.3"
+  }
+}

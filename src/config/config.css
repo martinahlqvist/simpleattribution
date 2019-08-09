@@ -1,0 +1,11 @@
+.custom-module-config label {
+    font-weight: bold;
+}
+
+.custom-module-config p {
+    font-style: italic;
+}
+
+.custom-module-config input[type="checkbox"] {
+    margin-right: 0.7em;
+}

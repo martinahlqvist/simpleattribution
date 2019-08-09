@@ -1,0 +1,17 @@
+{
+   "imgsettings": "Bildinställningar",
+   "imgwidth": "Bildbredd",
+   "imgwidthdesc": "Ange bildens bredd i px (endast siffror).",
+   "imgHeight": "Bildhöjd",
+   "imgHeightdesc": "Ange bildens höjd i px (endast siffror).",
+   "grayscale": "Gråskala",
+   "grayscaledesc": "Visa bilden i gråskala.",
+   "randomimg": "Slumpad bild",
+   "specificimg": "Specifik bild",
+   "specificDesc": "Få en specifik bild genom att ange ett id.",
+   "specificRef": "Se en lista över tillgängliga bilder här.",
+   "blurredimg": "Suddig bild",
+   "blurredRef": "Ger en suddig bild",
+   "cropgravity": "Ankring för beskärning",
+   "cropgravRef": "Ange orientering för beskärning av bilden."
+}
