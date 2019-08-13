@@ -1,7 +1,7 @@
 {
   "name": "simpleattribution",
   "version": "1.0.0",
-  "description": "Add a simple html attribution in sitevision ",
+  "description": "Add a simple html attribution in sitevision",
   "main": "index.js",
   "repository": {
     "type": "git",

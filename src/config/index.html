@@ -1,33 +1,44 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="panel-title">Inställningar</h3>
+        <h3 class="panel-title">Settings</h3>
     </div>
     <div class="panel-body">
         <div class="form-group">
-            <label>Bildbredd</label>
-            <P>Bildens bredd angett i pixlar utan enhet</P>
-            <input class="form-control" name="imageWidth">
+            <label>Type of licens</label>
+            <P>The kind of licens used</P>
+            <select id="select" name="license" class="form-control">
+                <option value="cc">Creative Commons</option>
+                <option value="pd">Public domain</option>
+                <option value="other">Other</option>
+            </select>
         </div>
         <div class="form-group">
-            <label>Bildhöjd</label>
-            <P>Bildens höjd angett i pixlar utan enhet</P>
-            <input class="form-control" name="imageHeight">
+            <label>Attribution name</label>
+            <P>The name that will be displayed as a link</P>
+            <input class="form-control" name="name">
         </div>
         <div class="form-group">
-            <label>Använd specifik bild</label>
-            <P>Bildens id-nummer. t ex 200</P>
-            <input class="form-control" name="imageID">
+            <label>Attribution link</label>
+            <P>Full URL to creator profile or similar. (Not link to file used)</P>
+            <input class="form-control" name="url">
         </div>
-
         <div class="form-group">
-            <label><input type="checkbox" name="greyscaleBoolean"
-                    data-value-type="boolean" />Gråskala</label>
+            <label>Version</label>
+            <P>Licens version (ie for Creative Commons)</P>
+            <input class="form-control" name="version">
         </div>
-
         <div class="form-group">
-            <label><input type="checkbox" name="blurBoolean"
-                    data-value-type="boolean" />Suddig</label>
+            <label>Version</label>
+            <P>Licens options (ie for Creative Commons)
+            </P>
+            <label><input type="checkbox" value="by" name="option" />Attribution</label>
+            <label><input type="checkbox" value="sa" name="option" />ShareAlike</label>
+            <label><input type="checkbox" value="nd" name="option" />No Derivatives</label>
         </div>
-
+        <div class="form-group">
+            <label>Image reference</label>
+            <P>Optional reference to image ("Mona Lisa" by)</P>
+            <input class="form-control" name="reference">
+        </div>
     </div>
 </div>

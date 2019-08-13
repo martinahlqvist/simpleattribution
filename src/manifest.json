@@ -3,7 +3,7 @@
    "version": "1.0.0",
    "name": "Attribution",
    "author": "Consid AB",
-   "description": "Add a simple html attribution in sitevision ",
+   "description": "Add a simple html attribution in sitevision",
    "helpUrl": "https://help.sitevision.se",
    "type": "WebApp"
 }

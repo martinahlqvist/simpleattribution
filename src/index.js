@@ -1,39 +1,44 @@
-(function() {
+(function () {
 	'use strict';
 	var router = require('router'),
 		appData = require('appData'),
-		endecUtil = require('EndecUtil'),
-		suffixArray = [],
-		imageSuffix = "",
-		imageString = "",
-		n = 0;
-	router.get('/', function(req, res) {
-		if (appData.get('greyscaleBoolean') === true) {
-			suffixArray.push('grayscale');
-		}
-		if (appData.get('blurBoolean') === true) {
-			suffixArray.push('blur');
-		}
-		if (appData.get('imageID') === null || appData.get('imageID') === "") {} else {
-			imageString += "/id/" + appData.get('imageID');
-		}
-		imageString += "/" + appData.get('imageWidth') + "/" + appData.get('imageHeight');
-		if (suffixArray.length > 0) {
-			for (n = 0; n < suffixArray.length; n++) {
-				if (n == 0) {
-					imageSuffix += "?"
-				} else {
-					imageSuffix += "&";
-				}
-				imageSuffix += suffixArray[n];
+		preCheck = function (value) {
+			if (value === null || value === undefined) {
+				value = "";
 			}
-		} else {}
-		var data = {
-			imageString: imageString,
-			imageSuffix: imageSuffix
+			return (value);
 		};
-		data.selectedLanguage = "language-" + data.currentLanguage;
-		data.selectedCode = endecUtil.escapeXML(data.currentCode);
+
+	router.get('/', function (req, res) {
+		var mergedOptions = "";
+
+		var checkboxOptions = appData.get('option');
+		if(checkboxOptions === null || checkboxOptions === undefined || checkboxOptions === "") {
+			checkboxOptions = ["by"];
+		}
+
+		var i=0;
+		for(i=0;i<checkboxOptions.length;i++) {
+			mergedOptions += checkboxOptions[i] + " ";
+		}
+		mergedOptions = mergedOptions.trim();
+		
+		var urlOptions = mergedOptions.split(' ').join('-');
+
+		var ccUrl = "https://creativecommons.org/licenses/"+urlOptions+"/"+preCheck(appData.get('version'))+"/";
+
+		var data = {
+			license: preCheck(appData.get('license')),
+			name: preCheck(appData.get('name')),
+			url: preCheck(appData.get('url')),
+			version: preCheck(appData.get('version')),
+			option: preCheck(appData.get('option')),
+			mergedOptions: mergedOptions,
+			reference: preCheck(appData.get('reference')),
+			ccUrl: ccUrl
+		};
+
+
 		res.render('/', data);
 	});
 }());
