@@ -1,6 +1,10 @@
 
 <% if (license == "cc") { %>
-<div class="con-attribution">
+        <% if (retract == "yes") { %> 
+        <div class="con-attribution con-attribution--retracted">
+        <% } else { %> 
+        <div class="con-attribution"> 
+        <% } %>
     <a  class="con-attribution__iconLink" target="_blank" href="<%- ccUrl %>">
         <div class="con-attribution__ccIcon"></div>
         <div class="con-attribution__ccText"><%- mergedOptions %></div>
@@ -15,30 +19,38 @@
         
 
 
-<% } else { %>
+<% } %>
 
    
 
 <% if (license == "pd") { %>
 
-
-
-    <div class="con-attribution">
-        <a  class="con-attribution__iconLink" target="_blank" href="#">
+        <% if (retract == "yes") { %> 
+        <div class="con-attribution con-attribution--retracted">
+        <% } else { %> 
+        <div class="con-attribution"> 
+        <% } %>
+        <a class="con-attribution__iconLink">
             <div class="con-attribution__ccPdIcon"></div>
         </a>
         <div class="con-attribution__ccAttribution">
-            <a target="#" href="<%- url %>">Public Domain</a>
+            <a>Public Domain</a>
         </div>
     </div>
 
 
     
 
-<% } else { %>
+<% } %>
 
-        <div class="con-attribution">
-            <a  class="con-attribution__iconLink" target="_blank" href="#">
+<% if (license == "copyright") { %>
+
+        <% if (retract == "yes") { %> 
+        <div class="con-attribution con-attribution--retracted">
+        <% } else { %> 
+        <div class="con-attribution"> 
+        <% } %>
+            <a class="con-attribution__iconLink">
                 <div class="con-attribution__anyIcon"></div>
             </a>
             <div class="con-attribution__ccAttribution">
@@ -50,5 +62,20 @@
         </div>
 
 <% } %>
+
+<% if (license == "other") { %>
+
+    <% if (retract == "yes") { %> 
+    <div class="con-attribution con-attribution--retracted">
+    <% } else { %> 
+    <div class="con-attribution"> 
+    <% } %>
+        <div class="con-attribution__ccAttribution">
+            <% if (reference !== "") { %> 
+            <p class="con-attribution__ccAttribution"><%- reference %></p>
+            <% } %>
+            <a target="#" href="<%- url %>"><%- name %></a>
+        </div>
+    </div>
 
 <% } %>

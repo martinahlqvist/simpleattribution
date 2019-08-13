@@ -4,11 +4,12 @@
     </div>
     <div class="panel-body">
         <div class="form-group">
-            <label>Type of licens</label>
-            <P>The kind of licens used</P>
+            <label>Type of license</label>
+            <P>The kind of license used</P>
             <select id="select" name="license" class="form-control">
                 <option value="cc">Creative Commons</option>
                 <option value="pd">Public domain</option>
+                <option value="copyright">Copyright</option>
                 <option value="other">Other</option>
             </select>
         </div>
@@ -24,12 +25,12 @@
         </div>
         <div class="form-group">
             <label>Version</label>
-            <P>Licens version (ie for Creative Commons)</P>
+            <P>License version (ie for Creative Commons)</P>
             <input class="form-control" name="version">
         </div>
         <div class="form-group">
-            <label>Version</label>
-            <P>Licens options (ie for Creative Commons)
+            <label>Options</label>
+            <P>License options (ie for Creative Commons)
             </P>
             <label><input type="checkbox" value="by" name="option" />Attribution</label>
             <label><input type="checkbox" value="sa" name="option" />ShareAlike</label>
@@ -39,6 +40,12 @@
             <label>Image reference</label>
             <P>Optional reference to image ("Mona Lisa" by)</P>
             <input class="form-control" name="reference">
+        </div>
+        <div class="form-group">
+                <label>Retract into image</label>
+                <P>Applies CSS code to position attribution over/inside element above</P>
+                <label><input type="radio" value="no" name="retract"/>No</label>
+                <label><input type="radio" value="yes" name="retract"/>Yes</label>
         </div>
     </div>
 </div>

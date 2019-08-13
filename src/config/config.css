@@ -1,5 +1,6 @@
 .custom-module-config label {
     font-weight: bold;
+    display: block;
 }
 
 .custom-module-config p {

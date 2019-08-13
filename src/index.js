@@ -14,13 +14,19 @@
 
 		var checkboxOptions = appData.get('option');
 		if(checkboxOptions === null || checkboxOptions === undefined || checkboxOptions === "") {
-			checkboxOptions = ["by"];
+			checkboxOptions = ["by"," "];
 		}
 
+		
 		var i=0;
+
+		if(typeof checkboxOptions === 'object') {
 		for(i=0;i<checkboxOptions.length;i++) {
 			mergedOptions += checkboxOptions[i] + " ";
 		}
+	} else {
+		mergedOptions += checkboxOptions;
+	}
 		mergedOptions = mergedOptions.trim();
 		
 		var urlOptions = mergedOptions.split(' ').join('-');
@@ -35,6 +41,7 @@
 			option: preCheck(appData.get('option')),
 			mergedOptions: mergedOptions,
 			reference: preCheck(appData.get('reference')),
+			retract: preCheck(appData.get('retract')),
 			ccUrl: ccUrl
 		};
 

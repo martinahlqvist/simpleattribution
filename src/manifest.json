@@ -1,6 +1,6 @@
 {
    "id": "consid.simpleattribution",
-   "version": "1.0.0",
+   "version": "1.0.4",
    "name": "Attribution",
    "author": "Consid AB",
    "description": "Add a simple html attribution in sitevision",

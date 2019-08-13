@@ -9,10 +9,24 @@
     border-radius: 3px;
     margin-top: 3px;
 }
+.con-attribution--retracted {
+    position: relative;
+    top: -35px;
+    left: 4px;
+    background: #fff;
+    border-top: 1px #efefef solid;
+    border-left: 1px #ddd solid;
+    border-right: 1px #ddd solid;
+    border-bottom: 1px #c1c1c1 solid;
+    display: flex;
+    margin-bottom: -30px;
+    width: max-content;
+}
 
 .con-attribution__ccAttribution a {
     text-decoration: none;
     margin-top: 0px;
+    color: #6f6f6f;
 }
 .con-attribution__ccAttribution {
     margin-top: 0px;
@@ -23,6 +37,7 @@
 .con-attribution__ccAttribution p {
     display: inline-flex;
     margin: 0 5px 0 0;
+    color: #6f6f6f;
 }
 
 .con-attribution__iconLink {
@@ -35,6 +50,7 @@
     margin-right: 5px;
     text-decoration: none;
     margin-top: 0px;
+    color: #6f6f6f;
 }
 
 .con-attribution__ccIcon:before {
